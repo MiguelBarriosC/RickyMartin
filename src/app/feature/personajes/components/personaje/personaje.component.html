@@ -1,0 +1,35 @@
+<div class="character" *ngIf="_person">
+    <div class="character-left">
+        <img [src]="_person.image" alt="">
+    </div>
+    <div class="character-right">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <label for="character_name">Nombre:</label>
+                <p id="character_name">{{ _person.name }}</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="character_specie">Especie:</label>
+                <p id="character_specie">{{ _person.species }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <label for="character_status">Estado:</label>
+                <p id="character_status">{{ _person.status }}</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="character_gender">Genero:</label>
+                <p id="character_gender">{{ _person.gender }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <select name="capitulos" id="capitulos_select" (change)="capituloChange($event.target.value)">
+                    <option value="selected" selected>Episodes</option>
+                    <option *ngFor="let episode of _person.episode" value="{{ episode }}">{{ episode }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

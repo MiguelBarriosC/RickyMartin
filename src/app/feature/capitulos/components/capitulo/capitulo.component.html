@@ -1,0 +1,18 @@
+<div class="cap" *ngIf="Capitulo">
+    <div class="cap-right">
+        <div>
+            <label for="cap_name">Nombre:</label>
+            <p id="cap_name">{{ _capitulo.name }}</p>
+        </div>
+        <div>
+            <label for="cap_date">Fecha de presentacíon:</label>
+            <p id="cap_date">{{ _capitulo.air_date }}</p>
+        </div>
+        <div>
+            <select name="personajes" id="personajes_select" (change)="personajeChange($event.target.value)">
+                <option value="selected" selected>Personajes</option>
+                <option *ngFor="let personaje of  _capitulo.characters" value="{{ personaje.id }}">{{ personaje.name }}</option>
+            </select>
+        </div>
+    </div>
+</div>

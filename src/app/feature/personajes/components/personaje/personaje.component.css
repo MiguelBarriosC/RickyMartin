@@ -1,0 +1,43 @@
+.character {
+    width: 440px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.2);;
+    display: flex;
+    border-radius: 20px;
+}
+.character .character-left {
+    width: 40%;
+    height: 100%;
+    outline: lightsalmon solid 1px;
+}
+.character .character-left img {
+    width: 100%;
+    height: 100%;
+}
+.character .character-right {
+    width: 60%;
+    height: 100%;
+    display: block;
+}
+.row {
+    padding: 0 20px;
+}
+.character-right label {
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(205, 255, 239);
+}
+.row select {
+    width: 100%;
+    background-color: salmon;
+    border-radius: 10px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 750px) {
+    .character {
+        width: 300px;
+        height: 320px;
+    }
+}

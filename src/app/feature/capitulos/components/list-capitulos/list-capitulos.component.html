@@ -1,0 +1,15 @@
+<div class="filter">
+    <input type="text" name="filterPost" id="capitulos_filter" class="capitulos_filter" [(ngModel)]="filterPost" placeholder="Busqueda">
+</div>
+<div class="content" *ngIf="capitulos">
+    <div *ngFor="let cap of capitulos.results | name:filterPost">
+        <app-capitulo [Capitulo]="cap"></app-capitulo>
+    </div>
+    <div  class="controls-content">
+        <div *ngIf="capitulos" class="controls">
+            <span *ngIf="capitulos.info.prev" (click)="prev()"><</span>
+            <span>{{ actualPage }}</span>
+            <span *ngIf="capitulos.info.next" (click)="next()">></span>
+        </div>
+    </div>
+</div>
